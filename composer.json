@@ -5,7 +5,8 @@
     "license": "InnoboxRR",
     "autoload": {
         "psr-4": {
-            "Itecschool\\AuditPkg\\": "src/"
+            "Itecschool\\AuditPkg\\": "src/",
+            "Itecschool\\AuditPkg\\Database\\Factories\\": "database/factories/"
         }
     },
     "authors": [
@@ -29,6 +30,11 @@
                 "Itecschool\\AuditPkg\\Providers\\EventServiceProvider",
                 "Itecschool\\AuditPkg\\Providers\\RouteServiceProvider"
             ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Itecschool\\AuditPkg\\Tests\\": "tests/"
         }
     }
 }
