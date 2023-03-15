@@ -133,6 +133,8 @@ class ComposerStaticInit79108a0cfbe3b9b9c215bcf0c68d979a
         ),
         'I' => 
         array (
+            'Itecschool\\AuditPkg\\Tests\\' => 26,
+            'Itecschool\\AuditPkg\\Database\\Factories\\' => 39,
             'Itecschool\\AuditPkg\\' => 20,
             'Innoboxrr\\Traits\\' => 17,
             'Innoboxrr\\SearchSurge\\' => 22,
@@ -371,8 +373,8 @@ class ComposerStaticInit79108a0cfbe3b9b9c215bcf0c68d979a
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -437,6 +439,14 @@ class ComposerStaticInit79108a0cfbe3b9b9c215bcf0c68d979a
         'Laravel\\SerializableClosure\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
+        ),
+        'Itecschool\\AuditPkg\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'Itecschool\\AuditPkg\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database/factories',
         ),
         'Itecschool\\AuditPkg\\' => 
         array (
