@@ -10,16 +10,16 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         
-        // $this->mergeConfigFrom(__DIR__ . '/../../config/itecschoolauditpkg.php', 'itecschoolauditpkg');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/itecschoolauditpkg.php', 'itecschoolauditpkg');
 
     }
 
     public function boot()
     {
         
-        // $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
-        // $this->loadViewsFrom(__DIR__.'/../../resources/views', 'itecschoolauditpkg');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'itecschoolauditpkg');
 
         if ($this->app->runningInConsole()) {
             
