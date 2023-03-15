@@ -1,0 +1,19 @@
+{
+    "name": "itecschool/audit-pkg",
+    "description": "Modulo de iTec School para auditar las operaciones del usuario y los intentos de acceso al sistema para prevenir accesos no autorizados o ataqques de fuerza bruta.",
+    "type": "library",
+    "license": "InnoboxRR",
+    "autoload": {
+        "psr-4": {
+            "Itecschool\\AuditPkg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Homero Raul",
+            "email": "h.raulvc@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
