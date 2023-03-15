@@ -15,5 +15,20 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^8.0"
+    },
+    "require": {
+        "innoboxrr/larapack-generator": "^1.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Itecschool\\AuditPkg\\Providers\\AppServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\AuthServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\EventServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\RouteServiceProvider"
+            ]
+        }
+    }
 }
