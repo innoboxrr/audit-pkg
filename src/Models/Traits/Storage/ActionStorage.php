@@ -23,6 +23,7 @@ trait ActionStorage
 
     }
 
+    /*
     public function updateModelMetas($request)
     {
 
@@ -31,6 +32,7 @@ trait ActionStorage
         return $this;
 
     }
+    */
 
     public function deleteModel()
     {

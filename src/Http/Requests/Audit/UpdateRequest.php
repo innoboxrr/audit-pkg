@@ -21,7 +21,15 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'before' => 'nullable',
+            'after' => 'nullable',
+            'route' => 'nullable',
+            'ip_address' => 'nullable',
+            'user_agent' => 'nullable',
+            'loggable_id' => 'nullable',
+            'loggable_type' => 'nullable',
+            'user_id' => 'nullable',
+            'action_id' => 'nullable'
             'audit_id' => 'required|numeric'
         ];
     }

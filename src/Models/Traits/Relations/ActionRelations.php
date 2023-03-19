@@ -8,6 +8,9 @@ namespace Itecschool\AuditPkg\Models\Traits\Relations;
 trait ActionRelations
 {
 	
-    
+    public function audits()
+    {
+    	return $this->hasMany('Itecschool\AuditPkg\Models\Audit');
+    }
 
 }

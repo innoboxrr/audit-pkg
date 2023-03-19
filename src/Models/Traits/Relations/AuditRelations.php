@@ -8,6 +8,19 @@ namespace Itecschool\AuditPkg\Models\Traits\Relations;
 trait AuditRelations
 {
 	
-    
+    public function loggable()
+    {
+        return $this->morphTo();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(config('itecschoolauditpkg.user_class', 'App\Models\User'));
+    }
+
+    public function action()
+    {
+    	return $this->belongsTo('Itecschool\AuditPkg\Models\Action');
+    }
 
 }

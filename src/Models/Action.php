@@ -24,11 +24,23 @@ class Action extends Model
         ActionOperations,
         ActionMutators;
         
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'description',
+        'template'
+    ];
 
-    protected $creatable = [];
+    protected $creatable = [
+        'name',
+        'description',
+        'template'
+    ];
 
-    protected $updatable = [];
+    protected $updatable = [
+        'name',
+        'description',
+        'template'
+    ];
 
     protected $casts = [];
 
@@ -38,11 +50,11 @@ class Action extends Model
 
     public $loadable_relations = [];
 
-    /*
+    
     protected static function newFactory()
     {
         return \Itecschool\AuditPkg\Database\Factories\ActionFactory::new();
     }
-    */
+    
 
 }

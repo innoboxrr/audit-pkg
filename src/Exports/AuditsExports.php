@@ -34,9 +34,9 @@ class AuditsExports implements FromView
     public function getQuery()
     {   
 
-        $builder = new Builder('Audit', $this->request);
+        $builder = new Builder();
 
-        return $builder->get();
+        return $builder->get('Itecschool\AuditPkg\Models\Audit', $this->request);
 
     }
 

@@ -34,9 +34,9 @@ class LoginAttemptsExports implements FromView
     public function getQuery()
     {   
 
-        $builder = new Builder('LoginAttempt', $this->request);
+        $builder = new Builder();
 
-        return $builder->get();
+        return $builder->get('Itecschool\AuditPkg\Models\LoginAttempt', $this->request);
 
     }
 

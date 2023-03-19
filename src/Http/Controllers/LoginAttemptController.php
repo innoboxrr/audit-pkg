@@ -69,9 +69,9 @@ class LoginAttemptController extends Controller
     public function index(IndexRequest $request)
     {
 
-        $builder = new Builder('LoginAttempt', $request);
+        $builder = new Builder();
 
-        $query = $builder->get();
+        $query = $builder->get(LoginAttempt::class, $request);
 
         return LoginAttemptResource::collection($query);
 

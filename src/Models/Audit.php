@@ -24,11 +24,41 @@ class Audit extends Model
         AuditOperations,
         AuditMutators;
         
-    protected $fillable = [];
+    protected $fillable = [
+        'before',
+        'after',
+        'route',
+        'ip_address',
+        'user_agent',
+        'loggable_id',
+        'loggable_type',
+        'user_id',
+        'action_id'
+    ];
 
-    protected $creatable = [];
+    protected $creatable = [
+        'before',
+        'after',
+        'route',
+        'ip_address',
+        'user_agent',
+        'loggable_id',
+        'loggable_type',
+        'user_id',
+        'action_id'
+    ];
 
-    protected $updatable = [];
+    protected $updatable = [
+        'before',
+        'after',
+        'route',
+        'ip_address',
+        'user_agent',
+        'loggable_id',
+        'loggable_type',
+        'user_id',
+        'action_id'
+    ];
 
     protected $casts = [];
 
@@ -38,11 +68,11 @@ class Audit extends Model
 
     public $loadable_relations = [];
 
-    /*
+    
     protected static function newFactory()
     {
         return \Itecschool\AuditPkg\Database\Factories\AuditFactory::new();
     }
-    */
+    
 
 }

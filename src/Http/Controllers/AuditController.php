@@ -69,9 +69,9 @@ class AuditController extends Controller
     public function index(IndexRequest $request)
     {
 
-        $builder = new Builder('Audit', $request);
+        $builder = new Builder();
 
-        $query = $builder->get();
+        $query = $builder->get(Audit::class, $request);
 
         return AuditResource::collection($query);
 

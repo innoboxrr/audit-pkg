@@ -69,9 +69,9 @@ class ActionController extends Controller
     public function index(IndexRequest $request)
     {
 
-        $builder = new Builder('Action', $request);
+        $builder = new Builder();
 
-        $query = $builder->get();
+        $query = $builder->get(Action::class, $request);
 
         return ActionResource::collection($query);
 

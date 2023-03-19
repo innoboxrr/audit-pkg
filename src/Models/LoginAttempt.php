@@ -24,11 +24,26 @@ class LoginAttempt extends Model
         LoginAttemptOperations,
         LoginAttemptMutators;
         
-    protected $fillable = [];
+    protected $fillable = [
+        'email',
+        'status',
+        'user_agent',
+        'ip_address'
+    ];
 
-    protected $creatable = [];
+    protected $creatable = [
+        'email',
+        'status',
+        'user_agent',
+        'ip_address'
+    ];
 
-    protected $updatable = [];
+    protected $updatable = [
+        'email',
+        'status',
+        'user_agent',
+        'ip_address'
+    ];
 
     protected $casts = [];
 
@@ -36,13 +51,18 @@ class LoginAttempt extends Model
 
     protected $editable_metas = [];
 
+    public $allowed_status = [
+        'success',
+        'failure'
+    ];
+
     public $loadable_relations = [];
 
-    /*
+    
     protected static function newFactory()
     {
         return \Itecschool\AuditPkg\Database\Factories\LoginAttemptFactory::new();
     }
-    */
+    
 
 }

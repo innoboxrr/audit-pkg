@@ -5,6 +5,7 @@ namespace Itecschool\AuditPkg\Models\Traits\Operations;
 trait AuditOperations
 {
 
+    /*
     public function buildPayload()
     {
 
@@ -20,5 +21,6 @@ trait AuditOperations
         return $this;
 
     }
+    */
 
 }

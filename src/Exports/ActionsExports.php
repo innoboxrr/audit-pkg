@@ -34,9 +34,9 @@ class ActionsExports implements FromView
     public function getQuery()
     {   
 
-        $builder = new Builder('Action', $this->request);
+        $builder = new Builder();
 
-        return $builder->get();
+        return $builder->get('Itecschool\AuditPkg\Models\Action', $this->request);
 
     }
 

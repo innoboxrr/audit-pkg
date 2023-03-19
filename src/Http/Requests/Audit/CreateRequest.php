@@ -19,7 +19,15 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'before' => 'nullable',
+            'after' => 'nullable',
+            'route' => 'nullable',
+            'ip_address' => 'required',
+            'user_agent' => 'required',
+            'loggable_id' => 'required',
+            'loggable_type' => 'required',
+            'user_id' => 'required',
+            'action_id' => 'required'
         ];
     }
     

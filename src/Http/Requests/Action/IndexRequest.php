@@ -17,7 +17,9 @@ class IndexRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'nullable|string|max:255',
+            'description' => 'nullable|string|max:500',
+            'template' => 'nullable|string|max:500'
         ];
     }
 }

@@ -8,6 +8,13 @@ namespace Itecschool\AuditPkg\Models\Traits\Relations;
 trait LoginAttemptRelations
 {
 	
-    
+    public function user()
+    {
+    	return $this->belongsTo(
+    		config('itecschoolauditpkg.user_class', 'App\Models\User'), 
+    		'email', 
+    		'email'
+    	);
+    }
 
 }
