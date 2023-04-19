@@ -2,7 +2,7 @@
 
 ## Comenzando 🚀
 
- 
+
 
 ## Pre-requisitos 📋
 
@@ -14,7 +14,7 @@ Requisitos del sistema:
 
 Pasos para la instalación del proyecto.
 
- -
+ - Llama al seeder `AuditSeeder` desde `DatabaseSeeder`
 
 
 ## Ejecutando las pruebas ⚙️

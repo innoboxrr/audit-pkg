@@ -5,7 +5,8 @@
     "license": "InnoboxRR",
     "autoload": {
         "psr-4": {
-            "Itecschool\\AuditPkg\\": "src/"
+            "Itecschool\\AuditPkg\\": "src/",
+            "Itecschool\\AuditPkg\\Database\\Factories\\": "database/factories/"
         }
     },
     "authors": [
@@ -15,5 +16,25 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^8.0"
+    },
+    "require": {
+        "innoboxrr/larapack-generator": "^1.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Itecschool\\AuditPkg\\Providers\\AppServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\AuthServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\EventServiceProvider",
+                "Itecschool\\AuditPkg\\Providers\\RouteServiceProvider"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Itecschool\\AuditPkg\\Tests\\": "tests/"
+        }
+    }
 }

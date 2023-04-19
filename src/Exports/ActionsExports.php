@@ -1,0 +1,43 @@
+<?php
+
+namespace Itecschool\AuditPkg\Exports;
+
+use Innoboxrr\SearchSurge\Search\Builder;
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
+
+class ActionsExports implements FromView
+{
+
+    protected $request;
+
+    public function __construct($request) 
+    {
+
+        $this->request = $request;
+
+    }
+
+    public function view(): View
+    {
+        return view(
+            config(
+                'itecschoolauditpkg.excel_view', 
+                'itecschoolauditpkg::excel.'
+            ) . 'action', 
+            [
+                'actions' => $this->getQuery()
+            ]
+        );
+    }
+
+    public function getQuery()
+    {   
+
+        $builder = new Builder();
+
+        return $builder->get('Itecschool\AuditPkg\Models\Action', $this->request);
+
+    }
+
+}
