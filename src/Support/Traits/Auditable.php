@@ -17,7 +17,7 @@ trait Auditable
 		return $this->morphMany('Itecschool\AuditPkg\Models\Audit', 'loggable');
 	}
 
-	public function log(string $type) : Audit
+	public function log(string $type)
 	{
 
 		if (!app()->runningInConsole() && auth()->check()) {
