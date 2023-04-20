@@ -13,7 +13,7 @@ use Itecschool\AuditPkg\Http\Requests\Action\RestoreRequest;
 use Itecschool\AuditPkg\Http\Requests\Action\ForceDeleteRequest;
 use Itecschool\AuditPkg\Http\Requests\Action\ExportRequest;
 
-class ActionController extends Controller
+class ActionController extends Controller 
 {
     
     public function __construct()
