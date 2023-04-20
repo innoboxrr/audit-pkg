@@ -2,7 +2,6 @@
 
 namespace Itecschool\AuditPkg\Support\Traits;
 
-use Illuminate\Support\Facades\Validator;
 use Itecschool\AuditPkg\Models\Audit;
 use Itecschool\AuditPkg\Models\Action;
 
