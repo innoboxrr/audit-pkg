@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('login_attempts', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->string('status');
+            $table->boolean('status');
             $table->string('ip_address');
             $table->string('user_agent');
             $table->timestamps();
