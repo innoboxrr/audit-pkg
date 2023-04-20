@@ -25,21 +25,21 @@ class Action extends Model
         ActionMutators;
         
     protected $fillable = [
-        'name',
-        'description',
-        'template'
+        'type',
+        'actionable_id',
+        'actionable_type',
+        'description'
     ];
 
     protected $creatable = [
-        'name',
-        'description',
-        'template'
+        'type',
+        'actionable_id',
+        'actionable_type',
+        'description'
     ];
 
     protected $updatable = [
-        'name',
         'description',
-        'template'
     ];
 
     protected $casts = [];

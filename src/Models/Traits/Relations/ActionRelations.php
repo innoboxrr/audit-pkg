@@ -13,4 +13,9 @@ trait ActionRelations
     	return $this->hasMany('Itecschool\AuditPkg\Models\Audit');
     }
 
+    public function actionable()
+    {
+        return $this->morphTo();
+    }
+
 }

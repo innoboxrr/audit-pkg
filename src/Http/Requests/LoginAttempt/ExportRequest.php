@@ -4,6 +4,7 @@ namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
 
 use Itecschool\AuditPkg\Models\LoginAttempt;
 use Illuminate\Foundation\Http\FormRequest;
+use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\ExportEvent;
 
 class ExportRequest extends FormRequest
 {
@@ -29,6 +30,15 @@ class ExportRequest extends FormRequest
         return [
             //
         ];
+    }
+
+    public function handle()
+    {
+
+        event(new ExportEvent($request));
+
+        return response()->json(['status' => true]);
+
     }
     
 }

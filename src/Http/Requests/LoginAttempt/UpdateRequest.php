@@ -3,8 +3,10 @@
 namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
 
 use Itecschool\AuditPkg\Models\LoginAttempt;
+use Itecschool\AuditPkg\Http\Resources\Models\LoginAttemptResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\UpdateEvent;
 
 class UpdateRequest extends FormRequest
 {
@@ -24,6 +26,21 @@ class UpdateRequest extends FormRequest
             //
             'login_attempt_id' => 'required|numeric'
         ];
+    }
+
+    public function handle()
+    {
+
+        $loginAttempt = LoginAttempt::findOrFail($request->login_attempt_id);
+
+        $loginAttempt = $loginAttempt->updateModel($request);
+
+        $response = new LoginAttemptResource($loginAttempt);
+
+        event(new UpdateEvent($loginAttempt, $request, $response));
+
+        return $response;
+
     }
 
 }

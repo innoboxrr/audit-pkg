@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('actions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->text('template')->nullable();
+            $table->string('type'); // Create, Update, Delete, etc.
+            $table->foreignId('actionable_id'); // Modelo sobre el que se está realizando la acción
+            $table->string('actionable_type'); 
+            $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

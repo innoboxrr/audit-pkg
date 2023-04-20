@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->longText('before')->nullable();
             $table->longText('after')->nullable();
-            $table->string('route')->nullable();
+            $table->string('route');
             $table->string('ip_address');
             $table->string('user_agent');
             $table->foreignId('loggable_id');

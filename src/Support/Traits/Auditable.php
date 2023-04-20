@@ -4,6 +4,7 @@ namespace Itecschool\AuditPkg\Support\Traits;
 
 use Illuminate\Support\Facades\Validator;
 use Itecschool\AuditPkg\Models\Audit;
+use Itecschool\AuditPkg\Models\Action;
 
 /**
  * Este trait lo debe implementar todo modelo que sea auditable
@@ -17,49 +18,25 @@ trait Auditable
 		return $this->morphMany('Itecschool\AuditPkg\Models\Audit', 'loggable');
 	}
 
-	/**
-	 * PENDIENTE: Verificar que se necesita para
-	 * crear el registro de operación sobre un modelo.
-	 * Yo creque que Action sale sobrando. Considerar su eliminación
-	 */
-	public function log(array $data) : Audit
+	public function log(string $type) : Audit
 	{
 
-		/**
-		 * De acuerdo con el loggable_id, y loggable_type, + un valor que traiga la acción por ejemplo:
-		 *  - create
-		 *  - update
-		 *  - delete
-		 *  - read
-		 *  - assignUser, etc
-		 * Se debe recuperar de las acciones disponibles en la base de datos.
-		 */
-		// $action = Audit::getAction($data);
-
-		$rules = [
-		    'before' => 'nullable',
-		    'after' => 'nullable',
-		    'route' => 'nullable',
-		    'ip_address' => 'required',
-		    'user_agent' => 'required',
-		    'loggable_id' => 'required',
-		    'loggable_type' => 'required',
-		    'user_id' => 'required',
-		    'action_id' => 'required', // Ver como recuperar este valor
-		];
-
-		$validator = Validator::make($data, $rules);
-
-		if ($validator->fails()) {
-
-		    $errors = $validator->errors();
-
-		} else {
-		    
-		    return Audit::create($data);
+		if (!app()->runningInConsole() && auth()->check()) {
+		
+			return Audit::create([
+		    	'before' => json_encode($this->getOriginal()),
+		    	'after' => ($this->isDirty()) ? json_encode($this->getAttributes()) : null,
+		        'route' => request()->url(),
+		        'ip_address' => request()->ip(),
+		        'user_agent' => request()->header('User-Agent'),
+		        'loggable_id' => $this->id,
+		        'loggable_type' => get_class($this),
+		        'user_id' => auth()->id(),
+		        'action_id' => Action::getId($type, $this),
+		    ]);
 
 		}
-
+	    
 	}
 
 }
