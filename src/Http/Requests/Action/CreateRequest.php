@@ -3,8 +3,10 @@
 namespace Itecschool\AuditPkg\Http\Requests\Action;
 
 use Itecschool\AuditPkg\Models\Action;
+use Itecschool\AuditPkg\Http\Resources\Models\ActionResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Itecschool\AuditPkg\Http\Events\Action\Events\CreateEvent;
 
 class CreateRequest extends FormRequest
 {
@@ -19,10 +21,21 @@ class CreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
-            'description' => 'required|string|max:500',
-            'template' => 'required|string|max:500'
+            //
         ];
+    }
+
+    public function handle()
+    {
+
+        $action = (new Action)->createModel($request);
+
+        $response = new ActionResource($action);
+
+        event(new CreateEvent($action, $request, $response));
+
+        return $response;
+
     }
     
 }

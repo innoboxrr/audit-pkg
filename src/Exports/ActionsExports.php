@@ -2,6 +2,7 @@
 
 namespace Itecschool\AuditPkg\Exports;
 
+use Itecschool\AuditPkg\Models\Action;
 use Innoboxrr\SearchSurge\Search\Builder;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -36,7 +37,7 @@ class ActionsExports implements FromView
 
         $builder = new Builder();
 
-        return $builder->get('Itecschool\AuditPkg\Models\Action', $this->request);
+        return $builder->get(Action::class, $this->request);
 
     }
 

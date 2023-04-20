@@ -2,6 +2,7 @@
 
 namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
 
+use Itecschool\AuditPkg\Models\LoginAttempt;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -46,6 +47,19 @@ class PolicyRequest extends FormRequest
                 Rule::requiredIf(in_array($this->policy, $this->modelPolicies)),
             ]
         ];
+    }
+
+    public function handle()
+    {
+
+         $loginAttempt = ($request->id) ? 
+            LoginAttempt::findOrFail($request->id) : 
+            app(LoginAttempt::class);
+
+        return response()->json([
+            $request->policy => user()->can($request->policy, $loginAttempt),
+        ]);
+
     }
 
 }

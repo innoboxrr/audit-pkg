@@ -3,6 +3,7 @@
 namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
 
 use Itecschool\AuditPkg\Models\LoginAttempt;
+use Itecschool\AuditPkg\Http\Resources\Models\LoginAttemptResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -28,6 +29,17 @@ class ShowRequest extends FormRequest
             ],
             'login_attempt_id' => 'required|numeric'
         ];
+    }
+
+    public function handle()
+    {
+
+        $loginAttempt = LoginAttempt::where('id', $request->login_attempt_id)
+            ->with($request->load_relations ?? [])
+            ->firstOrFail();
+
+        return new LoginAttemptResource($loginAttempt);
+
     }
     
 }

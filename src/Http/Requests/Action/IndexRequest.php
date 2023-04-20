@@ -3,8 +3,10 @@
 namespace Itecschool\AuditPkg\Http\Requests\Action;
 
 use Itecschool\AuditPkg\Models\Action;
+use Itecschool\AuditPkg\Http\Resources\Models\ActionResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Innoboxrr\SearchSurge\Search\Builder;
 
 class IndexRequest extends FormRequest
 {
@@ -17,9 +19,18 @@ class IndexRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'nullable|string|max:255',
-            'description' => 'nullable|string|max:500',
-            'template' => 'nullable|string|max:500'
+            //
         ];
+    }
+
+    public function handle()
+    {
+
+        $builder = new Builder();
+
+        $query = $builder->get(Action::class, $request);
+
+        return ActionResource::collection($query);
+
     }
 }

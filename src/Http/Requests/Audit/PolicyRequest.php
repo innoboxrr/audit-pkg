@@ -2,6 +2,7 @@
 
 namespace Itecschool\AuditPkg\Http\Requests\Audit;
 
+use Itecschool\AuditPkg\Models\Audit;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -46,6 +47,19 @@ class PolicyRequest extends FormRequest
                 Rule::requiredIf(in_array($this->policy, $this->modelPolicies)),
             ]
         ];
+    }
+
+    public function handle()
+    {
+
+         $audit = ($request->id) ? 
+            Audit::findOrFail($request->id) : 
+            app(Audit::class);
+
+        return response()->json([
+            $request->policy => user()->can($request->policy, $audit),
+        ]);
+
     }
 
 }

@@ -3,8 +3,10 @@
 namespace Itecschool\AuditPkg\Http\Requests\Audit;
 
 use Itecschool\AuditPkg\Models\Audit;
+use Itecschool\AuditPkg\Http\Resources\Models\AuditResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Itecschool\AuditPkg\Http\Events\Audit\Events\UpdateEvent;
 
 class UpdateRequest extends FormRequest
 {
@@ -21,17 +23,24 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'before' => 'nullable',
-            'after' => 'nullable',
-            'route' => 'nullable',
-            'ip_address' => 'nullable',
-            'user_agent' => 'nullable',
-            'loggable_id' => 'nullable',
-            'loggable_type' => 'nullable',
-            'user_id' => 'nullable',
-            'action_id' => 'nullable'
+            //
             'audit_id' => 'required|numeric'
         ];
+    }
+
+    public function handle()
+    {
+
+        $audit = Audit::findOrFail($request->audit_id);
+
+        $audit = $audit->updateModel($request);
+
+        $response = new AuditResource($audit);
+
+        event(new UpdateEvent($audit, $request, $response));
+
+        return $response;
+
     }
 
 }

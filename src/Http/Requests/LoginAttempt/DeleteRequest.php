@@ -3,7 +3,9 @@
 namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
 
 use Itecschool\AuditPkg\Models\LoginAttempt;
+use Itecschool\AuditPkg\Http\Resources\Models\LoginAttemptResource;
 use Illuminate\Foundation\Http\FormRequest;
+use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\DeleteEvent;
 
 class DeleteRequest extends FormRequest
 {
@@ -22,6 +24,21 @@ class DeleteRequest extends FormRequest
         return [
             'login_attempt_id' => 'required|numeric'
         ];
+    }
+
+    public function handle()
+    {
+
+        $loginAttempt = LoginAttempt::findOrFail($request->login_attempt_id);
+
+        $loginAttempt->deleteModel();
+
+        $response = new LoginAttemptResource($loginAttempt);
+
+        event(new DeleteEvent($loginAttempt, $request, $response));
+
+        return $response;
+
     }
     
 }

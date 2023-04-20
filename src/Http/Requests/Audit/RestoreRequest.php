@@ -3,8 +3,10 @@
 namespace Itecschool\AuditPkg\Http\Requests\Audit;
 
 use Itecschool\AuditPkg\Models\Audit;
+use Itecschool\AuditPkg\Http\Resources\Models\AuditResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Itecschool\AuditPkg\Http\Events\Audit\Events\RestoreEvent;
 
 class RestoreRequest extends FormRequest
 {
@@ -23,6 +25,21 @@ class RestoreRequest extends FormRequest
         return [
             'audit_id' => 'required|numeric'
         ];
+    }
+
+    public function handle()
+    {
+
+        $audit = Audit::withTrashed()->findOrFail($request->audit_id);
+
+        $audit->restoreModel();
+
+        $response = new AuditResource($audit);
+
+        event(new RestoreEvent($audit, $request, $response));
+
+        return $response;
+
     }
     
 }
