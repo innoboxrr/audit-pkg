@@ -45,7 +45,9 @@ class LoginAttempt extends Model
         'ip_address'
     ];
 
-    protected $casts = [];
+    protected $casts = [
+        'status' => 'boolean'
+    ];
 
     protected $protected_metas = [];
 
