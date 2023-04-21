@@ -13,19 +13,17 @@ trait LoginAttempts
 
 	public function loginAttempts()
     {
-        return $this->hasMany('Itecschool\AuditPkg\Models\LoginAttempt', 'email', 'email');
+        return $this->hasMany(LoginAttempt::class, 'email', 'email');
     }
 
     public function trackLoginAttempt($status = true)
     {
-
         LoginAttempt::create([
             'email' => $this->email,
             'status' => $status,
             'ip_address' => request()->ip(),
             'user_agent' => request()->header('User-Agent'),
         ]);
-
     }
 
 }

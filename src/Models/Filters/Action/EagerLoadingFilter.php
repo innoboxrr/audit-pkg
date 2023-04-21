@@ -17,6 +17,12 @@ class EagerLoadingFilter
             $query->with(['audits']);
 
         }
+
+        if ($request->load_actionable == 1 || $request->load_actionable == true) {
+
+            $query->with(['actionable']);
+
+        }
         
         /*
 

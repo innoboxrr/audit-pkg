@@ -17,9 +17,10 @@ class LoginAttemptFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->randomElement(['create', 'read', 'update', 'delete']),
-            'description' => 'Operación sobre modelo.',
-            'template' => 'Esto es un template, para que :name, lo pueda emplear en la plataforma.'
+            'email' => fake()->email(),
+            'status' => 0,
+            'ip_address' => '127.0.0.1',
+            'user_agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
         ];
     }
 

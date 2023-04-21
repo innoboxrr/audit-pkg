@@ -17,8 +17,9 @@ class ActionFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->word(),
-            'description' => fake()->text(),
+            'type' => 'create',
+            'actionable_id' => 1,
+            'actionable_type' => 'App\Models\User',
             'template' => fake()->text(),
         ];
     }
