@@ -2,7 +2,6 @@
 
 namespace Itecschool\AuditPkg\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Innoboxrr\Traits\MetaOperations;
@@ -12,7 +11,7 @@ use Itecschool\AuditPkg\Models\Traits\Assignments\ActionAssignment;
 use Itecschool\AuditPkg\Models\Traits\Operations\ActionOperations;
 use Itecschool\AuditPkg\Models\Traits\Mutators\ActionMutators;
 
-class Action extends Model
+class Action extends BaseModel
 {
 
     use HasFactory,

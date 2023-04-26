@@ -2,7 +2,6 @@
 
 namespace Itecschool\AuditPkg\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Innoboxrr\Traits\MetaOperations;
@@ -12,7 +11,7 @@ use Itecschool\AuditPkg\Models\Traits\Assignments\LoginAttemptAssignment;
 use Itecschool\AuditPkg\Models\Traits\Operations\LoginAttemptOperations;
 use Itecschool\AuditPkg\Models\Traits\Mutators\LoginAttemptMutators;
 
-class LoginAttempt extends Model
+class LoginAttempt extends BaseModel
 {
 
     use HasFactory,
