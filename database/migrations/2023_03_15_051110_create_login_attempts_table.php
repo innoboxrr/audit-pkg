@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('login_attempts', function (Blueprint $table) {
+        Schema::create(config('itecschoolauditpkg.db_prefix') . 'login_attempts', function (Blueprint $table) {
             $table->id();
             $table->string('email');
             $table->boolean('status');

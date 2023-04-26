@@ -6,7 +6,8 @@
     "autoload": {
         "psr-4": {
             "Itecschool\\AuditPkg\\": "src/",
-            "Itecschool\\AuditPkg\\Database\\Factories\\": "database/factories/"
+            "Itecschool\\AuditPkg\\Database\\Factories\\": "database/factories/",
+            "Itecschool\\AuditPkg\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "authors": [
