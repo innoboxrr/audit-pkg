@@ -23,9 +23,9 @@ class AppServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             
-            // $this->publishes([__DIR__.'/../../resources/views' => resource_path('views/vendor/itecschoolauditpkg'),], 'views');
+            $this->publishes([__DIR__.'/../../resources/views' => resource_path('views/vendor/itecschoolauditpkg'),], 'views');
 
-            // $this->publishes([__DIR__.'/../../config/itecschoolauditpkg.php' => config_path('itecschoolauditpkg.php')], 'config');
+            $this->publishes([__DIR__.'/../../config/itecschoolauditpkg.php' => config_path('itecschoolauditpkg.php')], 'config');
 
         }
 

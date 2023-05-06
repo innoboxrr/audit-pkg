@@ -3,9 +3,12 @@
 namespace Itecschool\AuditPkg\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Itecschool\PermissionPkg\Support\Traits\HasPermissions;
 
 class BaseModel extends Model
 {
+
+    use HasPermissions;
 
     public function __construct(array $attributes = [])
     {
@@ -14,7 +17,7 @@ class BaseModel extends Model
 
         $prefix = config('itecschoolauditpkg.db_prefix');
 
-        $this->table = $prefix . $this->table;
+        $this->table = $prefix . $this->getTable();
 
     }
 
