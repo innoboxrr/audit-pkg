@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Providers;
+namespace Innoboxrr\LaravelAudit\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -23,9 +23,9 @@ class RouteServiceProvider extends ServiceProvider
             $name = basename($file, '.php');
 
             Route::middleware('api')
-                ->prefix('api/itecschool/auditpkg/' . $name)
-                ->as('api.itecschool.auditpkg.' . $name . '.')
-                ->namespace('Itecschool\AuditPkg\Http\Controllers')
+                ->prefix('api/innoboxrr/laravel-audit/' . $name)
+                ->as('api.innoboxrr.laravel.audit.' . $name . '.')
+                ->namespace('Innoboxrr\LaravelAudit\Http\Controllers')
                 ->group($file);
 
         }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\Action;
+namespace Innoboxrr\LaravelAudit\Http\Requests\Action;
 
-use Itecschool\AuditPkg\Models\Action;
-use Itecschool\AuditPkg\Http\Resources\Models\ActionResource;
+use Innoboxrr\LaravelAudit\Models\Action;
+use Innoboxrr\LaravelAudit\Http\Resources\Models\ActionResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use Itecschool\AuditPkg\Http\Events\Action\Events\RestoreEvent;
+use Innoboxrr\LaravelAudit\Http\Events\Action\Events\RestoreEvent;
 
 class RestoreRequest extends FormRequest
 {

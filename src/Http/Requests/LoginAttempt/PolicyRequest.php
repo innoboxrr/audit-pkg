@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt;
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -43,7 +43,7 @@ class PolicyRequest extends FormRequest
             ],
             'id' => [
                 'numeric',
-                'exists:Itecschool\AuditPkg\Models\LoginAttempt,id',
+                'exists:Innoboxrr\LaravelAudit\Models\LoginAttempt,id',
                 Rule::requiredIf(in_array($this->policy, $this->modelPolicies)),
             ]
         ];

@@ -1,10 +1,10 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\Action;
+namespace Innoboxrr\LaravelAudit\Http\Requests\Action;
 
-use Itecschool\AuditPkg\Models\Action;
+use Innoboxrr\LaravelAudit\Models\Action;
 use Illuminate\Foundation\Http\FormRequest;
-use Itecschool\AuditPkg\Http\Events\Action\Events\ExportEvent;
+use Innoboxrr\LaravelAudit\Http\Events\Action\Events\ExportEvent;
 
 class ExportRequest extends FormRequest
 {

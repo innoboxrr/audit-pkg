@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\Action\Listeners\UpdateEvent;
+namespace Innoboxrr\LaravelAudit\Http\Events\Action\Listeners\UpdateEvent;
 
-use Itecschool\AuditPkg\Http\Events\Action\Events\UpdateEvent;
+use Innoboxrr\LaravelAudit\Http\Events\Action\Events\UpdateEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 

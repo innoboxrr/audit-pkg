@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Exports;
+namespace Innoboxrr\LaravelAudit\Exports;
 
-use Itecschool\AuditPkg\Models\Action;
+use Innoboxrr\LaravelAudit\Models\Action;
 use Innoboxrr\SearchSurge\Search\Builder;
 use Illuminate\Contracts\View\View;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -23,8 +23,8 @@ class ActionsExports implements FromView
     {
         return view(
             config(
-                'itecschoolauditpkg.excel_view', 
-                'itecschoolauditpkg::excel.'
+                'innoboxrrlaravelaudit.excel_view', 
+                'innoboxrrlaravelaudit::excel.'
             ) . 'action', 
             [
                 'actions' => $this->getQuery()

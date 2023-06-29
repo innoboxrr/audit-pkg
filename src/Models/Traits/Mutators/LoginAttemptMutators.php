@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Traits\Mutators;
+namespace Innoboxrr\LaravelAudit\Models\Traits\Mutators;
 
 trait LoginAttemptMutators
 {

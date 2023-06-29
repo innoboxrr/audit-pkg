@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\LoginAttempt\Listeners\ExportEvent;
+namespace Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Listeners\ExportEvent;
 
-use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\ExportEvent;
+use Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Events\ExportEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 

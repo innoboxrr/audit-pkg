@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create(config('itecschoolauditpkg.db_prefix') . 'actions', function (Blueprint $table) {
+        Schema::create(config('laravel-audit.db_prefix') . 'actions', function (Blueprint $table) {
             $table->id();
             $table->string('type'); // Create, Update, Delete, etc.
             $table->foreignId('actionable_id'); // Modelo sobre el que se está realizando la acción

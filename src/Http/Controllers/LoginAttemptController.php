@@ -1,17 +1,17 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Controllers;
+namespace Innoboxrr\LaravelAudit\Http\Controllers;
 
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\PoliciesRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\PolicyRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\IndexRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\ShowRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\CreateRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\UpdateRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\DeleteRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\RestoreRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\ForceDeleteRequest;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\ExportRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\PoliciesRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\PolicyRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\IndexRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\ShowRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\CreateRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\UpdateRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\DeleteRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\RestoreRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\ForceDeleteRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\ExportRequest;
 
 class LoginAttemptController extends Controller
 {

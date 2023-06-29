@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Controllers;
+namespace Innoboxrr\LaravelAudit\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

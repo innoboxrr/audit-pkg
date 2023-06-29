@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Support\Traits;
+namespace Innoboxrr\LaravelAudit\Support\Traits;
 
-use Itecschool\AuditPkg\Models\Audit;
-use Itecschool\AuditPkg\Models\Action;
+use Innoboxrr\LaravelAudit\Models\Audit;
+use Innoboxrr\LaravelAudit\Models\Action;
 
 /**
  * Este trait lo debe implementar todo modelo que sea auditable
@@ -14,7 +14,7 @@ trait Auditable
 
 	public function audits()
 	{
-		return $this->morphMany('Itecschool\AuditPkg\Models\Audit', 'loggable');
+		return $this->morphMany('Innoboxrr\LaravelAudit\Models\Audit', 'loggable');
 	}
 
 	public function log(string $type)

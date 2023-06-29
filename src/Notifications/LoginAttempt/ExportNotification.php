@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Notifications\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Notifications\LoginAttempt;
 
 use Maatwebsite\Excel\Facades\Excel;
-use Itecschool\AuditPkg\Exports\LoginAttemptsExports;
+use Innoboxrr\LaravelAudit\Exports\LoginAttemptsExports;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -30,7 +30,7 @@ class ExportNotification extends Notification
     public function via($notifiable)
     {
         
-        return config('itecschoolauditpkg.notification_via', ['mail', 'database']);
+        return config('laravel-audit.notification_via', ['mail', 'database']);
 
     }
 
@@ -64,7 +64,7 @@ class ExportNotification extends Notification
     private function createExport()
     {
 
-        Excel::store(new LoginAttemptsExports($this->request), $this->path, config('itecschoolauditpkg.export_disk', 's3'));
+        Excel::store(new LoginAttemptsExports($this->request), $this->path, config('laravel-audit.export_disk', 's3'));
 
     }
 

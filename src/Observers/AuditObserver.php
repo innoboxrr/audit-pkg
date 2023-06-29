@@ -1,8 +1,8 @@
 <?php
  
-namespace Itecschool\AuditPkg\Observers;
+namespace Innoboxrr\LaravelAudit\Observers;
  
-use Itecschool\AuditPkg\Models\Audit;
+use Innoboxrr\LaravelAudit\Models\Audit;
  
 class AuditObserver
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Filters\Audit;
+namespace Innoboxrr\LaravelAudit\Models\Filters\Audit;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;

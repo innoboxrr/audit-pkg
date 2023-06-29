@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\LoginAttempt\Listeners\RestoreEvent;
+namespace Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Listeners\RestoreEvent;
 
-use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\RestoreEvent;
+use Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Events\RestoreEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 

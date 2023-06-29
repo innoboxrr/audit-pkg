@@ -1,10 +1,10 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt;
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 use Illuminate\Foundation\Http\FormRequest;
-use Itecschool\AuditPkg\Http\Events\LoginAttempt\Events\ExportEvent;
+use Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Events\ExportEvent;
 
 class ExportRequest extends FormRequest
 {

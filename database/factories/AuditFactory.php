@@ -1,12 +1,12 @@
 <?php
 
-namespace Itecschool\AuditPkg\Database\Factories;
+namespace Innoboxrr\LaravelAudit\Database\Factories;
 
 /*
  * Docs: https://fakerphp.github.io/ 
  */
 
-use Itecschool\AuditPkg\Models\Audit;
+use Innoboxrr\LaravelAudit\Models\Audit;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AuditFactory extends Factory

@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Providers;
+namespace Innoboxrr\LaravelAudit\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -20,9 +20,9 @@ class AuthServiceProvider extends ServiceProvider
 
         foreach (glob(__DIR__ . '/../Policies/*.php') as $file) {
 
-            $policy = 'Itecschool\AuditPkg\Policies\\' . substr(basename($file), 0, -4);
+            $policy = 'Innoboxrr\LaravelAudit\Policies\\' . substr(basename($file), 0, -4);
             
-            $model = 'Itecschool\AuditPkg\Models\\' . str_replace('Policy', '', $policy);
+            $model = 'Innoboxrr\LaravelAudit\Models\\' . str_replace('Policy', '', $policy);
 
             if (class_exists($model) && class_exists($policy)) {
             

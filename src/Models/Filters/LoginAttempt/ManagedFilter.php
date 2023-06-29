@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Filters\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Models\Filters\LoginAttempt;
 
 use Innoboxrr\SearchSurge\Search\Utils\Managed;
 

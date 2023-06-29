@@ -1,17 +1,17 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Controllers;
+namespace Innoboxrr\LaravelAudit\Http\Controllers;
 
-use Itecschool\AuditPkg\Http\Requests\Audit\PoliciesRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\PolicyRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\IndexRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\ShowRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\CreateRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\UpdateRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\DeleteRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\RestoreRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\ForceDeleteRequest;
-use Itecschool\AuditPkg\Http\Requests\Audit\ExportRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\PoliciesRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\PolicyRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\IndexRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\ShowRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\CreateRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\UpdateRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\DeleteRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\RestoreRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\ForceDeleteRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\ExportRequest;
 
 class AuditController extends Controller
 {

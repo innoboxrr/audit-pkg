@@ -1,13 +1,14 @@
 {
-    "name": "itecschool/audit-pkg",
-    "description": "Modulo de iTec School para auditar las operaciones del usuario y los intentos de acceso al sistema para prevenir accesos no autorizados o ataqques de fuerza bruta.",
+    "name": "innoboxrr/laravel-audit",
+    "version": "1.0.0",
+    "description": "Módulo de auditoría",
     "type": "library",
     "license": "InnoboxRR",
     "autoload": {
         "psr-4": {
-            "Itecschool\\AuditPkg\\": "src/",
-            "Itecschool\\AuditPkg\\Database\\Factories\\": "database/factories/",
-            "Itecschool\\AuditPkg\\Database\\Seeders\\": "database/seeders/"
+            "Innoboxrr\\LaravelAudit\\": "src/",
+            "Innoboxrr\\LaravelAudit\\Database\\Factories\\": "database/factories/",
+            "Innoboxrr\\LaravelAudit\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "authors": [
@@ -21,21 +22,21 @@
         "orchestra/testbench": "^8.0"
     },
     "require": {
-        "innoboxrr/larapack-generator": "^1.2"
+        "innoboxrr/larapack-generator": "^2.0"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Itecschool\\AuditPkg\\Providers\\AppServiceProvider",
-                "Itecschool\\AuditPkg\\Providers\\AuthServiceProvider",
-                "Itecschool\\AuditPkg\\Providers\\EventServiceProvider",
-                "Itecschool\\AuditPkg\\Providers\\RouteServiceProvider"
+                "Innoboxrr\\LaravelAudit\\Providers\\AppServiceProvider",
+                "Innoboxrr\\LaravelAudit\\Providers\\AuthServiceProvider",
+                "Innoboxrr\\LaravelAudit\\Providers\\EventServiceProvider",
+                "Innoboxrr\\LaravelAudit\\Providers\\RouteServiceProvider"
             ]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Itecschool\\AuditPkg\\Tests\\": "tests/"
+            "Innoboxrr\\LaravelAudit\\Tests\\": "tests/"
         }
     }
 }

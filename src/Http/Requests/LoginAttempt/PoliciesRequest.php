@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt;
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PoliciesRequest extends FormRequest
@@ -16,7 +16,7 @@ class PoliciesRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric|exists:Itecschool\AuditPkg\Models\LoginAttempt,id'
+            'id' => 'nullable|numeric|exists:Innoboxrr\LaravelAudit\Models\LoginAttempt,id'
         ];
     }
 

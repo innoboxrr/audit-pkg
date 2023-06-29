@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\Audit\Events;
+namespace Innoboxrr\LaravelAudit\Http\Events\Audit\Events;
 
-use Itecschool\AuditPkg\Http\Requests\Audit\ExportRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\ExportRequest;
 use Illuminate\Support\Facades\App;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;

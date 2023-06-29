@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\Audit\Events;
+namespace Innoboxrr\LaravelAudit\Http\Events\Audit\Events;
 
-use Itecschool\AuditPkg\Models\Audit;
-use Itecschool\AuditPkg\Http\Requests\Audit\ForceDeleteRequest;
+use Innoboxrr\LaravelAudit\Models\Audit;
+use Innoboxrr\LaravelAudit\Http\Requests\Audit\ForceDeleteRequest;
 use Illuminate\Support\Facades\App;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;

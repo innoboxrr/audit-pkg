@@ -1,10 +1,10 @@
 <?php
 
-namespace Itecschool\AuditPkg\Tests\Feature\Models;
+namespace Innoboxrr\LaravelAudit\Tests\Feature\Models;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Itecschool\AuditPkg\Tests\TestCase;
+use Innoboxrr\LaravelAudit\Tests\TestCase;
 
 class LoginAttemptEndpointsTest extends TestCase
 {
@@ -12,7 +12,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_policies_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::factory()->create();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::factory()->create();
         
         $headers = [
             'Authorization' => config('test.token'),
@@ -87,7 +87,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_show_auth_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::latest()->first();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -107,7 +107,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_show_guest_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::latest()->first();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::latest()->first();
 
         $headers = [
             'Content-Type' => 'application/json',
@@ -126,7 +126,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_create_endpoint()
     {
 
-        $user = \Itecschool\AuditPkg\Models\User::first();
+        $user = \Innoboxrr\LaravelAudit\Models\User::first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -134,7 +134,7 @@ class LoginAttemptEndpointsTest extends TestCase
             'Accept' => 'application/json'
         ];  
 
-        $payload = \Itecschool\AuditPkg\Models\LoginAttempt::factory()->make()->getAttributes();
+        $payload = \Innoboxrr\LaravelAudit\Models\LoginAttempt::factory()->make()->getAttributes();
 
         $this->json('POST', '/api/itecschool/auditpkg//login-attempt/create', $payload, $headers)
             ->assertStatus(201);
@@ -144,7 +144,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_update_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::factory()->create();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::factory()->create();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -153,7 +153,7 @@ class LoginAttemptEndpointsTest extends TestCase
         ];  
 
         $payload = [
-            ...\Itecschool\AuditPkg\Models\LoginAttempt::factory()->make()->getAttributes(),
+            ...\Innoboxrr\LaravelAudit\Models\LoginAttempt::factory()->make()->getAttributes(),
             'login_attempt_id' => $loginAttempt->id
         ];
 
@@ -165,7 +165,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_delete_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::latest()->first();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -185,7 +185,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_restore_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::first();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -205,7 +205,7 @@ class LoginAttemptEndpointsTest extends TestCase
     public function test_login_attempt_force_delete_endpoint()
     {
 
-        $loginAttempt = \Itecschool\AuditPkg\Models\LoginAttempt::latest()->first();
+        $loginAttempt = \Innoboxrr\LaravelAudit\Models\LoginAttempt::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),

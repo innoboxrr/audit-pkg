@@ -1,15 +1,15 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models;
+namespace Innoboxrr\LaravelAudit\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Innoboxrr\Traits\MetaOperations;
-use Itecschool\AuditPkg\Models\Traits\Relations\LoginAttemptRelations;
-use Itecschool\AuditPkg\Models\Traits\Storage\LoginAttemptStorage;
-use Itecschool\AuditPkg\Models\Traits\Assignments\LoginAttemptAssignment;
-use Itecschool\AuditPkg\Models\Traits\Operations\LoginAttemptOperations;
-use Itecschool\AuditPkg\Models\Traits\Mutators\LoginAttemptMutators;
+use Innoboxrr\LaravelAudit\Models\Traits\Relations\LoginAttemptRelations;
+use Innoboxrr\LaravelAudit\Models\Traits\Storage\LoginAttemptStorage;
+use Innoboxrr\LaravelAudit\Models\Traits\Assignments\LoginAttemptAssignment;
+use Innoboxrr\LaravelAudit\Models\Traits\Operations\LoginAttemptOperations;
+use Innoboxrr\LaravelAudit\Models\Traits\Mutators\LoginAttemptMutators;
 
 class LoginAttempt extends BaseModel
 {
@@ -62,7 +62,7 @@ class LoginAttempt extends BaseModel
     
     protected static function newFactory()
     {
-        return \Itecschool\AuditPkg\Database\Factories\LoginAttemptFactory::new();
+        return \Innoboxrr\LaravelAudit\Database\Factories\LoginAttemptFactory::new();
     }
     
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Traits\Storage;
+namespace Innoboxrr\LaravelAudit\Models\Traits\Storage;
 
 trait LoginAttemptStorage
 {

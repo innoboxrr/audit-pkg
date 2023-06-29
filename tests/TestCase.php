@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Tests;
+namespace Innoboxrr\LaravelAudit\Tests;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Policies;
+namespace Innoboxrr\LaravelAudit\Policies;
 
 use App\Models\User;
-use Itecschool\AuditPkg\Models\Action;
+use Innoboxrr\LaravelAudit\Models\Action;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class ActionPolicy

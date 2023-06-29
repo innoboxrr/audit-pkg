@@ -1,12 +1,12 @@
 <?php
 
-namespace Itecschool\AuditPkg\Database\Factories;
+namespace Innoboxrr\LaravelAudit\Database\Factories;
 
 /*
  * Docs: https://fakerphp.github.io/ 
  */
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LoginAttemptFactory extends Factory

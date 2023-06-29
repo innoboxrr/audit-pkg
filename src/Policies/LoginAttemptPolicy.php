@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Policies;
+namespace Innoboxrr\LaravelAudit\Policies;
 
 use App\Models\User;
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class LoginAttemptPolicy

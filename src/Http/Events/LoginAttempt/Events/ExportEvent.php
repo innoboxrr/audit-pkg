@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\LoginAttempt\Events;
+namespace Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Events;
 
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\ExportRequest;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\ExportRequest;
 use Illuminate\Support\Facades\App;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;

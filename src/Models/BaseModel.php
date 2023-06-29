@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models;
+namespace Innoboxrr\LaravelAudit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,9 +12,9 @@ class BaseModel extends Model
 
         parent::__construct($attributes);
 
-        $prefix = config('itecschoolauditpkg.db_prefix');
+        $prefix = config('laravel-audit.db_prefix');
 
-        $this->table = $prefix . $this->table;
+        $this->table = $prefix . $this->getTable();
 
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Resources\Models;
+namespace Innoboxrr\LaravelAudit\Http\Resources\Models;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 

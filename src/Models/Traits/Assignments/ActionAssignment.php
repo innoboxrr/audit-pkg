@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Traits\Assignments;
+namespace Innoboxrr\LaravelAudit\Models\Traits\Assignments;
 
 /* Replace the word "Model" and "model" */
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Database\Seeders;
+namespace Innoboxrr\LaravelAudit\Database\Seeders;
 
 // Audit
 

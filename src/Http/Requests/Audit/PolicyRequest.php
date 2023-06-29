@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\Audit;
+namespace Innoboxrr\LaravelAudit\Http\Requests\Audit;
 
-use Itecschool\AuditPkg\Models\Audit;
+use Innoboxrr\LaravelAudit\Models\Audit;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -43,7 +43,7 @@ class PolicyRequest extends FormRequest
             ],
             'id' => [
                 'numeric',
-                'exists:Itecschool\AuditPkg\Models\Audit,id',
+                'exists:Innoboxrr\LaravelAudit\Models\Audit,id',
                 Rule::requiredIf(in_array($this->policy, $this->modelPolicies)),
             ]
         ];

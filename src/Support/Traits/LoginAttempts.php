@@ -1,12 +1,12 @@
 <?php
 
-namespace Itecschool\AuditPkg\Support\Traits;
+namespace Innoboxrr\LaravelAudit\Support\Traits;
 
 /**
  * Este trait lo debe implementar el modelo User
  */
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
 
 trait LoginAttempts 
 {

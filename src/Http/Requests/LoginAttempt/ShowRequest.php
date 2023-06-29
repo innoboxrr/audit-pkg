@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\LoginAttempt;
+namespace Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt;
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
-use Itecschool\AuditPkg\Http\Resources\Models\LoginAttemptResource;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Http\Resources\Models\LoginAttemptResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

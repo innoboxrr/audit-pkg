@@ -1,8 +1,8 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\Audit;
+namespace Innoboxrr\LaravelAudit\Http\Requests\Audit;
 
-use Itecschool\AuditPkg\Models\Audit;
+use Innoboxrr\LaravelAudit\Models\Audit;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PoliciesRequest extends FormRequest
@@ -16,7 +16,7 @@ class PoliciesRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric|exists:Itecschool\AuditPkg\Models\Audit,id'
+            'id' => 'nullable|numeric|exists:Innoboxrr\LaravelAudit\Models\Audit,id'
         ];
     }
 

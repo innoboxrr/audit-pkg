@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Traits\Operations;
+namespace Innoboxrr\LaravelAudit\Models\Traits\Operations;
 
 trait AuditOperations
 {

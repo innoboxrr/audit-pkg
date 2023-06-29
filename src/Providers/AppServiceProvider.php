@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Providers;
+namespace Innoboxrr\LaravelAudit\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,7 +10,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         
-        $this->mergeConfigFrom(__DIR__ . '/../../config/itecschoolauditpkg.php', 'itecschoolauditpkg');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/laravel-audit.php', 'laravel-audit');
 
     }
 
@@ -19,13 +19,13 @@ class AppServiceProvider extends ServiceProvider
         
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'itecschoolauditpkg');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'innoboxrrlaravelaudit');
 
         if ($this->app->runningInConsole()) {
             
-            // $this->publishes([__DIR__.'/../../resources/views' => resource_path('views/vendor/itecschoolauditpkg'),], 'views');
+            // $this->publishes([__DIR__.'/../../resources/views' => resource_path('views/vendor/innoboxrrlaravelaudit'),], 'views');
 
-            // $this->publishes([__DIR__.'/../../config/itecschoolauditpkg.php' => config_path('itecschoolauditpkg.php')], 'config');
+            // $this->publishes([__DIR__.'/../../config/laravel-audit.php' => config_path('laravel-audit.php')], 'config');
 
         }
 

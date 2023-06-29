@@ -1,15 +1,15 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models;
+namespace Innoboxrr\LaravelAudit\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Innoboxrr\Traits\MetaOperations;
-use Itecschool\AuditPkg\Models\Traits\Relations\ActionRelations;
-use Itecschool\AuditPkg\Models\Traits\Storage\ActionStorage;
-use Itecschool\AuditPkg\Models\Traits\Assignments\ActionAssignment;
-use Itecschool\AuditPkg\Models\Traits\Operations\ActionOperations;
-use Itecschool\AuditPkg\Models\Traits\Mutators\ActionMutators;
+use Innoboxrr\LaravelAudit\Models\Traits\Relations\ActionRelations;
+use Innoboxrr\LaravelAudit\Models\Traits\Storage\ActionStorage;
+use Innoboxrr\LaravelAudit\Models\Traits\Assignments\ActionAssignment;
+use Innoboxrr\LaravelAudit\Models\Traits\Operations\ActionOperations;
+use Innoboxrr\LaravelAudit\Models\Traits\Mutators\ActionMutators;
 
 class Action extends BaseModel
 {
@@ -52,7 +52,7 @@ class Action extends BaseModel
     
     protected static function newFactory()
     {
-        return \Itecschool\AuditPkg\Database\Factories\ActionFactory::new();
+        return \Innoboxrr\LaravelAudit\Database\Factories\ActionFactory::new();
     }
     
 

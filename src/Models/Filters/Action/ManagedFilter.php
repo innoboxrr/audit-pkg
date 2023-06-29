@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Models\Filters\Action;
+namespace Innoboxrr\LaravelAudit\Models\Filters\Action;
 
 use Innoboxrr\SearchSurge\Search\Utils\Managed;
 

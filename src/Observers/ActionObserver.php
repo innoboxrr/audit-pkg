@@ -1,8 +1,8 @@
 <?php
  
-namespace Itecschool\AuditPkg\Observers;
+namespace Innoboxrr\LaravelAudit\Observers;
  
-use Itecschool\AuditPkg\Models\Action;
+use Innoboxrr\LaravelAudit\Models\Action;
  
 class ActionObserver
 {

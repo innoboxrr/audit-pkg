@@ -1,10 +1,10 @@
 <?php
 
-namespace Itecschool\AuditPkg\Tests\Feature\Models;
+namespace Innoboxrr\LaravelAudit\Tests\Feature\Models;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Itecschool\AuditPkg\Tests\TestCase;
+use Innoboxrr\LaravelAudit\Tests\TestCase;
 
 class ActionEndpointsTest extends TestCase
 {
@@ -12,7 +12,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_policies_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::factory()->create();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::factory()->create();
         
         $headers = [
             'Authorization' => config('test.token'),
@@ -87,7 +87,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_show_auth_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::latest()->first();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -107,7 +107,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_show_guest_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::latest()->first();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::latest()->first();
 
         $headers = [
             'Content-Type' => 'application/json',
@@ -126,7 +126,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_create_endpoint()
     {
 
-        $user = \Itecschool\AuditPkg\Models\User::first();
+        $user = \Innoboxrr\LaravelAudit\Models\User::first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -134,7 +134,7 @@ class ActionEndpointsTest extends TestCase
             'Accept' => 'application/json'
         ];  
 
-        $payload = \Itecschool\AuditPkg\Models\Action::factory()->make()->getAttributes();
+        $payload = \Innoboxrr\LaravelAudit\Models\Action::factory()->make()->getAttributes();
 
         $this->json('POST', '/api/itecschool/auditpkg//action/create', $payload, $headers)
             ->assertStatus(201);
@@ -144,7 +144,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_update_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::factory()->create();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::factory()->create();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -153,7 +153,7 @@ class ActionEndpointsTest extends TestCase
         ];  
 
         $payload = [
-            ...\Itecschool\AuditPkg\Models\Action::factory()->make()->getAttributes(),
+            ...\Innoboxrr\LaravelAudit\Models\Action::factory()->make()->getAttributes(),
             'action_id' => $action->id
         ];
 
@@ -165,7 +165,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_delete_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::latest()->first();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -185,7 +185,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_restore_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::first();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::first();
 
         $headers = [
             'Authorization' => config('test.token'),
@@ -205,7 +205,7 @@ class ActionEndpointsTest extends TestCase
     public function test_action_force_delete_endpoint()
     {
 
-        $action = \Itecschool\AuditPkg\Models\Action::latest()->first();
+        $action = \Innoboxrr\LaravelAudit\Models\Action::latest()->first();
 
         $headers = [
             'Authorization' => config('test.token'),

@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Events\LoginAttempt\Events;
+namespace Innoboxrr\LaravelAudit\Http\Events\LoginAttempt\Events;
 
-use Itecschool\AuditPkg\Models\LoginAttempt;
-use Itecschool\AuditPkg\Http\Requests\LoginAttempt\ForceDeleteRequest;
+use Innoboxrr\LaravelAudit\Models\LoginAttempt;
+use Innoboxrr\LaravelAudit\Http\Requests\LoginAttempt\ForceDeleteRequest;
 use Illuminate\Support\Facades\App;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;

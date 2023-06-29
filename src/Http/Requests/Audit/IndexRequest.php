@@ -1,9 +1,9 @@
 <?php
 
-namespace Itecschool\AuditPkg\Http\Requests\Audit;
+namespace Innoboxrr\LaravelAudit\Http\Requests\Audit;
 
-use Itecschool\AuditPkg\Models\Audit;
-use Itecschool\AuditPkg\Http\Resources\Models\AuditResource;
+use Innoboxrr\LaravelAudit\Models\Audit;
+use Innoboxrr\LaravelAudit\Http\Resources\Models\AuditResource;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 use Innoboxrr\SearchSurge\Search\Builder;

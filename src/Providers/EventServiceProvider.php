@@ -1,6 +1,6 @@
 <?php
 
-namespace Itecschool\AuditPkg\Providers;
+namespace Innoboxrr\LaravelAudit\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
@@ -29,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
         
         $basePath = realpath(__DIR__ . '/../Http/Events');
 
-        $namespace = 'Itecschool\AuditPkg\Http\Events\\';
+        $namespace = 'Innoboxrr\LaravelAudit\Http\Events\\';
 
         $models = glob("{$basePath}/*", GLOB_ONLYDIR);
 
