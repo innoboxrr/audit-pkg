@@ -1,6 +1,5 @@
 {
     "name": "innoboxrr/laravel-audit",
-    "version": "1.0.0",
     "description": "Módulo de auditoría",
     "type": "library",
     "license": "InnoboxRR",
